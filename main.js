@@ -37,10 +37,12 @@ let contentFunction = () =>{
     }
 }
 
-document.querySelector('#name').addEventListener('click', ()=>{
+document.querySelector('.add').addEventListener('click', ()=>{
     contentFunction();
 });
-
+document.querySelector('#name').addEventListener('keydown', () =>{
+    if(event.key === 'Enter') contentFunction();
+});
 
 
 //addObjects({nombre});
